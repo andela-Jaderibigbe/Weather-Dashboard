@@ -5,6 +5,7 @@ const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 
 const TARGET = process.env.npm_lifecycle_event;
+
 const PATHS = {
   app   : path.join(__dirname, 'app'),
   build : path.join(__dirname, 'build')
@@ -35,15 +36,20 @@ if(TARGET === 'start' || !TARGET) {
       port: process.env.PORT || '3000'  
     },
     plugins: [
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
       new NpmInstallPlugin({
         save: true
       })
     ],
     module: {
       loaders: [
-        {test: /\.css$/, loaders: ['style', 'css'], include: PATHS.app}
+        {test: /\.jsx?$/, loaders: ['babel?cacheDirectory'], include: PATHS.app},
+        {test: /\.css$/, loaders: ['style', 'css'], include: PATHS.app},
+        {test: /\.scss$/, loaders: ['style', 'css', 'sass']}
       ]
+    },
+    resolve: {
+      extensions: ['', '.js', '.jsx']
     }
   });
 }
