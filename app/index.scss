@@ -1,0 +1,45 @@
+@import '../node_modules/rc-slider/assets/index.css';
+
+$global-font-family : 'Raleway', sans-serif;
+$global-body-bg : #FCFCFC;
+$section-bg-color: #FFFFFF;
+$border-color: #CCCCCC;
+
+body {
+  padding-top: 50px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.42857143;
+  font-family: $global-font-family;
+  font-size: 14px;
+  background-color: $global-body-bg;
+  margin: 0px;
+}
+
+.dashboard-wrapper {
+  .section {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+
+    .sub-section {
+      background-color: $section-bg-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid $border-color;
+      height: 500px;
+
+      &:first-of-type {
+        margin-right: 20px
+      }
+
+      .rc-slider-handle-2 {
+        display: none;
+      }
+    }
+  }
+}

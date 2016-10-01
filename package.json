@@ -11,6 +11,7 @@
   "author": "Jyd",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.14.0",
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -20,8 +21,17 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.25.0",
+    "d3": "^4.2.6",
     "npm-install-webpack-plugin": "^4.0.4",
+    "rc-slider": "^5.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.1",
+    "underscore": "^1.8.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1",
     "webpack-merge": "^0.14.1"
@@ -30,6 +40,7 @@
     "node-sass": "^3.10.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "redux": "^3.6.0",
     "sass-loader": "^4.0.2"
   }
 }
